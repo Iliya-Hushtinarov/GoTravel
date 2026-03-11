@@ -24,6 +24,6 @@ Bootstrap 5 (Integrated for UI components and responsive layouts)
 JavaScript (ES6+)
 
 ## 🌐 Live Demo
-You can check out the live version of my project here: https://user10293883.github.io/GoTravel/
+You can check out the live version of my project here: https://iliya-hushtinarov.github.io/GoTravel/
 
 *Note: This project was built for educational purposes as part of my first-year Computer Science coursework. I am currently expanding my knowledge in web development and C#, and I’m always open to feedback!*

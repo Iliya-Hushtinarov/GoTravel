@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>GoTravel Оферти</title>
+	<meta name="description" content="Разгледай актуалните оферти на GoTravel – градски престои, плажни ваканции, приключенски и семейни пътувания, зимни спортове на прозрачни цени.">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="icon" type="image/png" href="images/favicon-2.png">
+	<script src="script.js" defer></script>
+</head>
+<body>
+	<header class="offers main-header">
+		<a href="index.html">
+		<div class="header-logo">
+			
+			<div class="img-logo">
+				<img src="images/logo.png" alt="logo-img">
+			</div>
+				
+			<h1><span>Go</span>Travel</h1>
+		</div>
+		</a>	
+		<nav class="main-nav" id="main-nav">
+			<ul>
+				<li>
+					<a href="index.html" class="nav-link">Начало</a> 
+				</li>
+				<li>
+					<a href="offers.html" class="nav-link active">Оферти</a>
+				</li>
+				<li>
+					<a href="about.html" class="nav-link">За нас</a>
+				</li>
+				<li>
+					<a href="#contacts" class="nav-link">Контакти</a>
+				</li>
+			</ul>
+		</nav>			
+		</div>
+		<div class="log-nav-burgers">
+			<div class="log-sign">
+				<a href="logIn.html" class="log">Вход</a>
+				<a href="signIn.html" class="sign">Регистрация</a>
+			</div>
+			<a class="log-link" href="logIn.html"></a>
+			<button id="burger-btn" onclick="Open('navBtn')">
+				<img src="images/burger-menu.png">
+			</button>
+		</div>
+	</header>
+	<div onclick="Close()" class="overlay" id="offers-overlay"></div>
+	<main class="offers-main">
+		<button id="switch-filter-btn" onclick="Open('filterBtn')"></button>
+		<aside id="offers-filter" class="filter">
+			<h2>Филтър</h2>
+			<form>
+				<select id="country">
+					<option value="">Държава</option>
+					<option value="argentina">Аржентина</option>
+					<option value="indonesia">Индонезия</option>
+					<option value="spain">Испания</option>
+					<option value="italy">Италия</option>
+					<option value="costa rica">Коста Рика</option>
+					<option value="maldives">Малдиви</option>
+					<option value="malta">Малта</option>
+					<option value="nepal">Непал</option>
+					<option value="slovenia">Словения</option>
+					<option value="turkey">Турция</option>
+					<option value="france">Франция</option>
+					<option value="switzerland">Швейцария</option>
+				</select>
+
+				<h3>Тип пътуване:</h3>
+				
+				<input id="city" type="checkbox" name="trip-type" value="city">
+				<label for="city">Градски престой</label><br>
+
+				
+				<input id="beach" type="checkbox" name="trip-type" value="beach">
+				<label for="beach">Плаж</label><br>
+				
+				<input id="adventure" type="checkbox" name="trip-type" value="adventure">
+				<label for="adventure">Приключения</label><br>
+				
+				<input id="family" type="checkbox" name="trip-type" value="family">
+				<label for="family">Семейни пакети</label><br>
+				
+				<input id="romantic" type="checkbox" name="trip-type" value="romantic">
+				<label for="romantic">Романтични</label><br>
+				
+				<input id="winter" type="checkbox" name="trip-type" value="winter">
+				<label for="winter">Зимни спортове</label>
+
+				<h3>Тип транспорт:</h3>
+				<input id="plane" type="radio" name="transport" value="plane">
+				<label for="plane">Самолет</label><br>
+
+				<input id="ship" type="radio" name="transport" value="ship">
+				<label for="ship">Кораб</label><br>
+
+				<input id="bus" type="radio" name="transport" value="bus">
+				<label for="bus">Автобус</label><br>
+
+				<input id="all-transport" type="radio" name="transport" value="all-transport">
+				<label for="all-transport">Всички</label><br>
+
+				<label id="price-lable" for="price-number">Максимална цена:</label>
+				<input type="number" min="0" max="1500" step="100" id="price-number" oninput="Equalize('number')"><span> €</span>
+				<input type="range" min="0" max="1500" step="100" id="price-range" oninput="Equalize('range')">
+				<div class="buttons">
+					<button id="filter-reset" onclick="clearFilter()" type="reset">Изчисти</button>
+					<button id="filter-btn" onclick="return Filter()">Филтрирай</button>
+				</div>
+				
+			</form>
+			
+		</aside>
+			<section class="offers">
+				<h1>Всички оферти</h1>
+				<p class="intro">Открий следващото си пътуване</p>
+				<div class="cards-wrapper">
+					<article class="card" data-country="italy" data-type="city" data-transport="plane" data-price="399">
+						<a href="offers/rome.html">
+							<div class="card-image">
+								<img src="images/rome-sm.jpg" loading="lazy">
+							</div>
+							<div class="content">
+								<h3>Рим, Италия</h3>
+								<ul class="info">
+									<li class="rating"><span>★★★★☆</span> (4.6)</li>
+									<li class="offer-type"><span>Тип: </span>Градски престой</li>
+									<li class="travel-type"><span>Пътуване:</span> Самолет</li>
+									<li class="duration"><span>3</span> нощувки <span>/ 4</span>  дни</li>
+									
+								</ul>
+									<p class="price"> Цена: <span>399</span> €</p>
+							</div>
+						</a>
+					</article>
+					<article class="card" data-country="france" data-type="city" data-transport="bus" data-price="299">
+						<a href="offers/paris.html">
+							<div class="card-image">
+								<img src="images/paris4.jpg" loading="lazy" alt="Снимка-Париж">
+							</div>
+							<div class="content">
+								<h3>Париж, Франция</h3>
+								<ul class="info">
+									<li class="rating"><span>★★★★☆</span> (4.7)</li>
+									<li class="offer-type"><span>Тип: </span>Градски престой</li>
+									<li class="travel-type"><span>Пътуване:</span>Автобус</li>
+									<li class="duration"><span>4</span> нощувки <span>/ 5</span>  дни</li>
+									
+								</ul>
+									<p class="price"> Цена: <span>299</span> €</p>
+							</div>
+						</a>
+					</article>
+					<article class="card" data-country="spain" data-type="city" data-transport="plane" data-price="499">
+						<a href="offers/barcelona.html">
+							<div class="card-image"alt="Снимка-Барселона">
+								<img src="images/barcelona-sm.jpg" loading="lazy">
+							</div>
+							<div class="content">
+								<h3>Барселона, Испания</h3>
+								<ul class="info">
+									<li class="rating"><span>★★★★★</span> (4.8)</li>
+									<li class="offer-type"><span>Тип: </span>Градски престой</li>
+									<li class="travel-type"><span>Пътуване:</span> Самолет</li>
+									<li class="duration"><span>4</span> нощувки <span>/ 5</span>  дни</li>
+									
+								</ul>
+									<p class="price"> Цена: <span>499</span> €</p>
+							</div>
+						</a>
+					</article>
+					<article class="card" data-country="indonesia" data-type="beach" data-transport="plane" data-price="1199">
+						<a href="offers/bali.html">
+							<div class="card-image">
+								<img src="images/bali-sm.jpg" loading="lazy" alt="Снимка-Бали">
+							</div>
+							<div class="content">
+								<h3>Бали, Индонезия</h3>
+								<ul class="info">
+									<li class="rating"><span>★★★★★</span> (4.9)</li>
+									<li class="offer-type"><span>Тип: </span>Плаж</li>
+									<li class="travel-type"><span>Пътуване:</span> Самолет</li>
+									<li class="duration"><span>7</span> нощувки <span>/ 8</span>  дни</li>
+									
+								</ul>
+									<p class="price"> Цена: <span>1199</span> €</p>
+							</div>
+						</a>
+					</article>
+					<article class="card" data-country="maldives" data-type="beach" data-transport="ship" data-price="1399">
+						<a href="offers/maldives.html">
+							<div class="card-image" >
+								<img src="images/maldives-sm.jpg" alt="Снимка-Малдиви" loading="lazy">
+							</div>
+							<div class="content">
+								<h3>Малдиви</h3>
+								<ul class="info">
+									<li class="rating"><span>★★★★★</span> (4.9)</li>
+									<li class="offer-type"><span>Тип: </span>Плаж</li>
+									<li class="travel-type"><span>Пътуване:</span> Кораб</li>
+									<li class="duration"><span>5</span> нощувки <span>/ 6</span>  дни</li>
+									
+								</ul>
+									<p class="price"> Цена: <span>1399</span> €</p>
+							</div>
+						</a>
+					</article>
+					<article class="card" data-country="greece" data-type="beach" data-transport="bus" data-price="899">
+						<a href="offers/santorini.html">
+							<div class="card-image">
+								<img src="images/santorini-sm.jpg" alt="Снимка-Санторини" loading="lazy">
+							</div>
+							<div class="content">
+								<h3>Санторини, Гърция</h3>
+								<ul class="info">
+									<li class="rating"><span>★★★★☆</span> (4.7)</li>
+									<li class="offer-type"><span>Тип: </span>Плаж</li>
+									<li class="travel-type"><span>Пътуване:</span> Автобус</li>
+									<li class="duration"><span>6</span> нощувки <span>/ 7</span>  дни</li>
+									
+								</ul>
+									<p class="price"> Цена: <span>899</span> €</p>
+							</div>
+						</a>
+					</article>
+					<article class="card" data-country="argentina" data-type="adventure" data-transport="plane" data-price="1499">
+						<a href="offers/patagonia.html">
+							<div class="card-image">
+								<img src="images/patagonia-sm.jpg" alt="Снимка-Патагония" loading="lazy">
+							</div>
+							<div class="content">
+								<h3>Патагония, Аржентина</h3>
+								<ul class="info">
+									<li class="rating"><span>★★★★★</span> (4.8)</li>
+									<li class="offer-type"><span>Тип: </span>Приключения</li>
+									<li class="travel-type"><span>Пътуване:</span> Самолет</li>
+									<li class="duration"><span>8</span> нощувки <span>/ 9</span>  дни</li>
+									
+								</ul>
+									<p class="price"> Цена: <span>1499</span> €</p>
+							</div>
+						</a>
+					</article>
+					<article class="card" data-country="costa rica" data-type="adventure" data-transport="plane" data-price="1299">
+						<a href="offers/costa-rica.html">
+							<div class="card-image">
+								<img src="images/costarica.jpg" alt="Снимка-Коста Рика" loading="lazy">
+							</div>
+							<div class="content">
+								<h3>Коста Рика</h3>
+								<ul class="info">
+									<li class="rating"><span>★★★★★</span> (4.9)</li>
+									<li class="offer-type"><span>Тип: </span>Приключения</li>
+									<li class="travel-type"><span>Пътуване:</span> Самолет</li>
+									<li class="duration"><span>7</span> нощувки <span>/ 8</span>  дни</li>
+									
+								</ul>
+									<p class="price"> Цена: <span>1299</span> €</p>
+							</div>
+						</a>
+					</article>
+					<article class="card" data-country="nepal" data-type="adventure" data-transport="plane" data-price="1099">
+						<a href="offers/nepal.html">
+							<div class="card-image">
+								<img src="images/nepal-sm.jpg" alt="Снимка-Непал" loading="lazy">
+							</div>
+							<div class="content">
+								<h3>Непал</h3>
+								<ul class="info">
+									<li class="rating"><span>★★★★☆</span> (4.7)</li>
+									<li class="offer-type"><span>Тип: </span>Приключения</li>
+									<li class="travel-type"><span>Пътуване:</span> Самолет</li>
+									<li class="duration"><span>6</span> нощувки <span>/ 7</span>  дни</li>
+									
+								</ul>
+									<p class="price"> Цена: <span>1099</span> €</p>
+							</div>
+						</a>
+					</article>
+					<article class="card" data-country="turkey" data-type="family" data-transport="bus" data-price="690">
+						<a href="offers/antalya.html">
+							<div class="card-image">
+								<img src="images/antalya-sm.jpg" alt="Снимка-Анталия" loading="lazy"> 
+							</div>
+							<div class="content">
+								<h3>Анталия, Турция</h3>
+								<ul class="info">
+									<li class="rating"><span>★★★★☆</span> (4.6)</li>
+									<li class="offer-type"><span>Тип: </span>Семейни пакети</li>
+									<li class="travel-type"><span>Пътуване:</span> Автобус</li>
+									<li class="duration"><span>7</span> нощувки <span>/ 8</span>  дни</li>
+									
+								</ul>
+									<p class="price"> Цена: <span>690</span> €</p>
+							</div>
+						</a>
+					</article>
+					<article class="card" data-country="spain" data-type="family" data-transport="plane" data-price="899">
+						<a href="offers/canary-islands.html">
+							<div class="card-image">
+								<img src="images/tenerifeCanary-sm.jpg" alt="Снимка-Канарски острови" loading="lazy">
+							</div>
+							<div class="content">
+								<h3>Канарски острови</h3>
+								<ul class="info">
+									<li class="rating"><span>★★★★☆</span> (4.8)</li>
+									<li class="offer-type"><span>Тип: </span>Семейни пакети</li>
+									<li class="travel-type"><span>Пътуване:</span> Самолет</li>
+									<li class="duration"><span>5</span> нощувки <span>/ 6</span>  дни</li>
+									
+								</ul>
+									<p class="price"> Цена: <span>899</span> €</p>
+							</div>
+						</a>
+					</article>
+					<article class="card" data-country="malta" data-type="romantic" data-transport="plane" data-price="499">
+						<a href="offers/malta.html">
+							<div class="card-image">
+								<img src="images/malta-sm.jpg" alt="Снимка-Малта" loading="lazy">
+							</div>
+							<div class="content">
+								<h3>Малта</h3>
+								<ul class="info">
+									<li class="rating"><span>★★★★☆</span> (4.7)</li>
+									<li class="offer-type"><span>Тип: </span>Романтични</li>
+									<li class="travel-type"><span>Пътуване:</span> Самолет</li>
+									<li class="duration"><span>3</span> нощувки <span>/ 4</span>  дни</li>
+									
+								</ul>
+									<p class="price"> Цена: <span>499</span> €</p>
+							</div>
+						</a>
+					</article>
+					<article class="card" data-country="italy" data-type="romantic" data-transport="plane" data-price="399">
+						<a href="offers/venice.html">
+							<div class="card-image">
+								<img src="images/venice-sm.jpg" alt="Снимка-Венеция" loading="lazy">
+							</div>
+							<div class="content">
+								<h3>Венеция, Италия</h3>
+								<ul class="info">
+									<li class="rating"><span>★★★★☆</span> (4.6)</li>
+									<li class="offer-type"><span>Тип: </span>Романтични</li>
+									<li class="travel-type"><span>Пътуване:</span> Самолет</li>
+									<li class="duration"><span>3</span> нощувки <span>/ 4</span>  дни</li>
+									
+								</ul>
+									<p class="price"> Цена: <span>399</span> €</p>
+							</div>
+						</a>
+					</article>
+					<article class="card" data-country="switzerland" data-type="winter" data-transport="plane" data-price="899">
+						<a href="offers/alps.html">
+							<div class="card-image">
+								<img src="images/switzerland-sm.jpg" alt="Снимка-Алпите" loading="lazy">
+							</div>
+							<div class="content">
+								<h3>Алпите, Швейцария</h3>
+								<ul class="info">
+									<li class="rating"><span>★★★★★</span> (4.9)</li>
+									<li class="offer-type"><span>Тип: </span>Зимни спортове</li>
+									<li class="travel-type"><span>Пътуване:</span> Самолет</li>
+									<li class="duration"><span>5</span> нощувки <span>/ 6</span>  дни</li>
+									
+								</ul>
+									<p class="price"> Цена: <span>899</span> €</p>
+							</div>
+						</a>
+					</article>
+					<article class="card" data-country="slovenia" data-type="winter" data-transport="bus" data-price="699">
+						<a href="offers/slovenia.html">
+							<div class="card-image" >
+								<img src="images/slovenia-sm.jpg" alt="Снимка-Словения" loading="lazy">
+							</div>
+							<div class="content">
+								<h3>Словения</h3>
+								<ul class="info">
+									<li class="rating"><span>★★★★☆</span> (4.7)</li>
+									<li class="offer-type"><span>Тип: </span>Зимни спортове</li>
+									<li class="travel-type"><span>Пътуване:</span> Автобус</li>
+									<li class="duration"><span>6</span> нощувки <span>/ 7</span>  дни</li>
+									
+								</ul>
+									<p class="price"> Цена: <span>699</span> €</p>
+							</div>
+						</a>
+					</article>
+				</div>
+			</section>
+	</main>
+		<footer>
+		<div class="footer-row-1">
+			<a href="index.html">
+			<div class ="footer-logo">
+				
+				<div class="img">
+					<img src="images/logo.png" alt="logo-img">
+				</div>
+				
+				
+				<h1><span id="go">Go</span>Travel</h1>
+
+			</div>
+			</a>
+	
+			<nav class="footer-nav">
+				<h4>Навигация</h4>
+				<ul>
+					<li>
+						<a href="index.html" class="nav-link active">Начало</a> 
+					</li>
+					<li>
+						<a href="offers.html" class="nav-link">Оферти</a>
+					</li>
+					<li>
+						<a href="about.html" class="nav-link">За нас</a>
+					</li>
+				</ul>
+			</nav>
+			<div id="contacts" class="footer-contact">
+			  <h4>Контакти</h4>
+		      <p>&#128231 gotravel@gmail.com</p>
+		      <p>&#128222 +359 123 456 789</p>
+		    </div>
+		   <div class="footer-social">
+		      <h4>Социални мрежи</h4>
+		      <a href="https://www.facebook.com" target="_blank">
+		      	<img src="images/facebook-logo.png" alt="facebook-logo">
+		      </a>
+		      <a href="https://www.instagram.com" target="_blank">
+		      	<img src="images/instagram-logo.png" alt="instagram-logo">
+		      </a>
+		      <a href="https://www.x.com" target="_blank">
+		      	<img src="images/X-logo.png" alt="x-logo">
+		      </a>
+		    </div>
+		</div>
+		<div class="footer-row-2">
+			<p>© 2025 GO TRAVEL. All Rights Reserved.</p>
+		</div>
+	</footer>
+</body>
+</html>

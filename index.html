@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>GoTravel</title>
+	<meta name="description" content="GoTravel – открий следващото си пътуване без граници. Подбрани оферти за градски почивки, плажни ваканции и приключения по света.">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="icon" type="image/png" href="images/favicon-2.png">
+		<script src="script.js" defer></script>
+</head>
+<body>
+	<header class="main-header">
+		<a href="index.html">
+		<div class="header-logo">
+			
+			<div class="img-logo">
+				<img src="images/logo.png" alt="logo-img">
+			</div>
+				
+			<h1><span>Go</span>Travel</h1>
+		</div>
+		</a>	
+		<nav class="main-nav" id="main-nav">
+			<ul>
+				<li>
+					<a href="index.html" class="nav-link active">Начало</a> 
+				</li>
+				<li>
+					<a href="offers.html" class="nav-link">Оферти</a>
+				</li>
+				<li>
+					<a href="about.html" class="nav-link">За нас</a>
+				</li>
+				<li>
+					<a href="#contacts" class="nav-link">Контакти</a>
+				</li>
+			</ul>
+		</nav>			
+		</div>
+		<div class="log-nav-burgers">
+			<div class="log-sign">
+				<a href="logIn.html" class="log">Вход</a>
+				<a href="signIn.html" class="sign">Регистрация</a>
+			</div>
+			<a class="log-link" href="logIn.html"></a>
+			<button id="burger-btn" onclick="Open('navBtn')">
+				<img src="images/burger-menu.png">
+			</button>
+		</div>
+	</header>
+	<main>
+		<section class="hero">
+			<div id="blackout"></div>
+			<div id="hero-content">
+				<h1>Пътувай без граници!</h1>
+				<h2>Открий нови дестинации и незабравими преживявания...</h2>
+			</div>
+		</section>
+		<section class="top-offers">
+			<h2>Топ оферти</h2>
+			<p class="top-offers-intro">Не изпускай шанса – резервирай своята мечтана ваканция още сега!</p>
+			<div class="top-cards-wrapper">	
+				<article class="top-card">
+					<a href="offers/bali.html" >
+						<div class="top-card-img">
+							<img src="images/bali.jpg" alt="bali-img">
+						</div>
+						<div class="top-card-content-wrapper">
+							<h3>Бали, Индонезия</h3>
+							<ul class="info">
+									<li class="rating"><span>★★★★★</span> (4.9)</li>
+									<li class="offer-type"><span>Тип: </span>Плаж</li>
+									<li class="travel-type"><span>Пътуване:</span> Самолет</li>
+									<li class="duration"><span>7</span> нощувки <span>/ 8</span>  дни</li>
+									
+								</ul>
+							<p class="top-price"> Цена: <span>1199</span> €</p>
+						</div>
+					</a>
+				</article>
+				
+				<article class="top-card">
+					<a href="offers/barcelona.html" >
+						<div class="top-card-img">
+							<img src="images/barcelona-sm.jpg" alt="barcelona-img">
+						</div>
+						<div class="top-card-content-wrapper">
+							<h3>Барселона, Испания</h3>
+							<ul class="info">
+									<li class="rating"><span>★★★★★</span> (4.8)</li>
+									<li class="offer-type"><span>Тип: </span>Градски престой</li>
+									<li class="travel-type"><span>Пътуване:</span> Самолет</li>
+									<li class="duration"><span>4</span> нощувки <span>/ 5</span>  дни</li>
+									
+								</ul>
+							<p class="top-price"> Цена: <span>499</span> €</p>
+						</div>
+					</a>
+				</article>
+				<article class="top-card">
+					<a href="offers/alps.html" >
+						<div class="top-card-img">
+							<img src="images/switzerland.jpg" alt="alps-img">
+						</div>
+						<div class="top-card-content-wrapper">
+							<h3>Алпите, Швейцария</h3>
+							<ul class="info">
+									<li class="rating"><span>★★★★★</span> (4.9)</li>
+									<li class="offer-type"><span>Тип: </span>Зимни спортове</li>
+									<li class="travel-type"><span>Пътуване:</span> Самолет</li>
+									<li class="duration"><span>5</span> нощувки <span>/ 6</span>  дни</li>
+									
+								</ul>
+							<p class="top-price"> Цена: <span>899</span> €</p>
+						</div>
+					</a>
+				</article>
+			</div>
+		</section>
+		<section class="trust-section">
+			<h2>Защо да изберете GoTravel?</h2>
+			<div class="features">
+				<div class="features-row">
+					<article class="feature">
+						<h3> <img src="images/task.png" alt="task-img"> Лесно планиране</h3>
+						<p>Интуитивна платформа, която ви помага бързо и лесно да изберете своето пътуване.</p>
+					</article>
+					<article class="feature">
+						
+						<h3><img src="images/destination.png" alt="destination-img"> Подбрани дестинации</h3>
+						<p>Внимателно подбрани дестинации, съчетаващи култура, природа и незабравими преживявания.</p>
+					</article>
+				</div>
+				<div class="features-row">
+					<article class="feature">
+						<h3><img src="images/best-price.png" alt="best-price-img"> Прозрачни цени</h3>
+						<p>Ясни и коректни цени без скрити такси, подходящи за всеки бюджет.</p>
+					</article>
+					<article class="feature">
+						<h3><img src="images/trust.png" alt="trust-img"> Подкрепа и доверие</h3>
+						<p>Винаги сме до вас с информация и съдействие преди и по време на пътуването.</p>
+					</article>
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer>
+		<div class="footer-row-1">
+			<a href="index.html">
+			<div class ="footer-logo">
+				
+				<div class="img">
+					<img src="images/logo.png" alt="logo-img">
+				</div>
+				
+				
+				<h1><span id="go">Go</span>Travel</h1>
+
+			</div>
+			</a>
+	
+			<nav class="footer-nav">
+				<h4>Навигация</h4>
+				<ul>
+					<li>
+						<a href="index.html" class="nav-link active">Начало</a> 
+					</li>
+					<li>
+						<a href="offers.html" class="nav-link">Оферти</a>
+					</li>
+					<li>
+						<a href="about.html" class="nav-link">За нас</a>
+					</li>
+				</ul>
+			</nav>
+			<div id="contacts" class="footer-contact">
+			  <h4>Контакти</h4>
+		      <p>&#128231 gotravel@gmail.com</p>
+		      <p>&#128222 +359 123 456 789</p>
+		    </div>
+		    <div class="footer-social">
+		      <h4>Социални мрежи</h4>
+		      <a href="https://www.facebook.com" target="_blank">
+		      	<img src="images/facebook-logo.png" alt="facebook-logo">
+		      </a>
+		      <a href="https://www.instagram.com" target="_blank">
+		      	<img src="images/instagram-logo.png" alt="instagram-logo">
+		      </a>
+		      <a href="https://www.x.com" target="_blank">
+		      	<img src="images/X-logo.png" alt="x-logo">
+		      </a>
+		    </div>
+		</div>
+		<div class="footer-row-2">
+			<p>© 2025 GO TRAVEL. All Rights Reserved.</p>
+		</div>
+	</footer>
+</body>
+</html>

@@ -28,7 +28,7 @@ function Validate(form){
 
     var condition = true;
 
-    const required = "Задължително поле!";
+    const required = "Required field!";
 
     const emailPattern = /^[^\s@№%$&^!~#\/\\|\?]+@[^\s%@№$&^!~#\/\\|\?]+\.[^\s%@№$&^!~#\/\\|\?\.]{2,}$/;
     const forbiddenChars = /[\s%№$&^!~#\/\\|\?]/;
@@ -47,7 +47,7 @@ function Validate(form){
             document.getElementById('name-error').innerHTML = required;
         } else if(name.length<2){
             condition = false;
-            document.getElementById('name-error').innerHTML = "Името трябва да съдържа поне 2 символа!";
+            document.getElementById('name-error').innerHTML = "Name must contain at least 2 characters!";
         }else{
             document.getElementById('name-error').innerHTML = "";
         }
@@ -57,7 +57,7 @@ function Validate(form){
             document.getElementById('surname-error').innerHTML = required;
         } else if(surname.length<2){
             condition = false;
-            document.getElementById('surname-error').innerHTML = "Фамилията трябва да съдържа поне 2 символа!";
+            document.getElementById('surname-error').innerHTML = "Surname must contain at least 2 characters!";
         }else{
             document.getElementById('surname-error').innerHTML = "";
         }
@@ -67,15 +67,15 @@ function Validate(form){
             document.getElementById('phone-error').innerHTML = required;
         } else if (phone.length<7 || phone.length>15) {
             condition = false;
-            document.getElementById('phone-error').innerHTML = "Невалидна дължина!";
+            document.getElementById('phone-error').innerHTML = "Invalid length!";
         } else if(phone[0] != '+' && !phone[0].match(/[0-9]/)){
             condition = false;
-            document.getElementById('phone-error').innerHTML = "Невалиден символ!";
+            document.getElementById('phone-error').innerHTML = "Invalid character!";
         } else{
             for(var i = 1; i < phone.length; i++) {
                 if (!phone[i].match(/[0-9]/) ) {
                     condition = false;
-                    document.getElementById('phone-error').innerHTML = "Невалиден символ!";
+                    document.getElementById('phone-error').innerHTML = "Invalid character!";
                     break;
                 }else{
                     document.getElementById('phone-error').innerHTML = "";
@@ -89,19 +89,19 @@ function Validate(form){
             document.getElementById('email-error').innerHTML = required;
         }else if (email.length < 6) {
             condition = false;
-            document.getElementById('email-error').innerHTML = "Имейлът трябва да съдържа поне 6 символа!";
+            document.getElementById('email-error').innerHTML = "Email must contain at least 6 characters!";
         }else if (!email.includes("@")) {
             condition = false;
-            document.getElementById('email-error').innerHTML = "Имейлът трябва да съдържа '@'!";
+            document.getElementById('email-error').innerHTML = "Email must contain '@'!";
         }else if (!email.includes(".")) {
             condition = false;
-            document.getElementById('email-error').innerHTML = "Имейлът трябва да съдържа '.'!";
+            document.getElementById('email-error').innerHTML = "Email must contain '.'!";
         }else if (forbiddenChars.test(email)) {
             condition = false;
-            document.getElementById('email-error').innerHTML = "Имейлът не може да съдържа специални символи!";
+            document.getElementById('email-error').innerHTML = "Email cannot contain special characters!";
         }else if (!emailPattern.test(email)){
             condition = false;
-            document.getElementById('email-error').innerHTML = "Имейлът е зададен в грешен формат!";
+            document.getElementById('email-error').innerHTML = "Email format is incorrect!";
         }else{
             document.getElementById('email-error').innerHTML = "";
         }
@@ -112,19 +112,19 @@ function Validate(form){
             document.getElementById('password-error').innerHTML = required;
         }else if (password.length<8) {
             condition = false;
-            document.getElementById('password-error').innerHTML = "Паролата трябва да съдържа поне 8 символа!";
+            document.getElementById('password-error').innerHTML = "Password must contain at least 8 characters!";
         }else if (!password.match(/[a-z]/)) {
             condition = false;
-            document.getElementById('password-error').innerHTML = "Паролата трябва да съдържа поне една малка латинска, една главна латинска буква, една цифра и един специален символ!";
+            document.getElementById('password-error').innerHTML = "Password must contain at least one lowercase letter, one uppercase letter, one digit, and one special character!";
         }else if (!password.match(/[A-Z]/)) {
             condition = false;
-            document.getElementById('password-error').innerHTML = "Паролата трябва да съдържа поне една малка, една главна буква, една цифра и един специален символ!2";
+            document.getElementById('password-error').innerHTML = "Password must contain at least one lowercase letter, one uppercase letter, one digit, and one special character!";
         }else if (!password.match(/[0-9]/)) {
             condition = false;
-            document.getElementById('password-error').innerHTML = "Паролата трябва да съдържа поне една малка, една главна буква, една цифра и един специален символ!3";
+            document.getElementById('password-error').innerHTML = "Password must contain at least one lowercase letter, one uppercase letter, one digit, and one special character!";
         }else if (!specialChars.test(password)) {
             condition = false;
-            document.getElementById('password-error').innerHTML = "Паролата трябва да съдържа поне една малка, една главна буква, една цифра и един специален символ!4";
+            document.getElementById('password-error').innerHTML = "Password must contain at least one lowercase letter, one uppercase letter, one digit, and one special character!";
         }else{
             document.getElementById('password-error').innerHTML = "";
         }
@@ -134,13 +134,13 @@ function Validate(form){
             document.getElementById('rep-password-error').innerHTML = required;
         }else if (repPassword != password) {
             condition = false;
-            document.getElementById('rep-password-error').innerHTML = "Паролата не съвпада!";
+            document.getElementById('rep-password-error').innerHTML = "Passwords do not match!";
         }else{
             document.getElementById('rep-password-error').innerHTML = "";
         }
 
         if (condition == true) {
-            alert("Успешна регистрация!");
+            alert("Registration successful!");
         }
         return condition;
     }
@@ -154,19 +154,19 @@ function Validate(form){
             document.getElementById('email-error-log').innerHTML = required;
         }else if (emailLog.length < 6) {
             condition = false;
-            document.getElementById('email-error-log').innerHTML = "Имейлът трябва да съдържа поне 6 символа!";
+            document.getElementById('email-error-log').innerHTML = "Email must contain at least 6 characters!";
         }else if (!emailLog.includes("@")) {
             condition = false;
-            document.getElementById('email-error-log').innerHTML = "Имейлът трябва да съдържа '@'!";
+            document.getElementById('email-error-log').innerHTML = "Email must contain '@'!";
         }else if (!emailLog.includes(".")) {
             condition = false;
-            document.getElementById('email-error-log').innerHTML = "Имейлът трябва да съдържа '.'!";
+            document.getElementById('email-error-log').innerHTML = "Email must contain '.'!";
         }else if (forbiddenChars.test(emailLog)) {
             condition = false;
-            document.getElementById('email-error-log').innerHTML = "Имейлът не може да съдържа специални символи!";
+            document.getElementById('email-error-log').innerHTML = "Email cannot contain special characters!";
         }else if (!emailPattern.test(emailLog)){
             condition = false;
-            document.getElementById('email-error-log').innerHTML = "Имейлът е зададен в грешен формат!";
+            document.getElementById('email-error-log').innerHTML = "Email format is incorrect!";
         }else{
             document.getElementById('email-error-log').innerHTML = "";
         }
@@ -176,24 +176,24 @@ function Validate(form){
             document.getElementById('password-error-log').innerHTML = required;
         }else if (passwordLog.length<8) {
             condition = false;
-            document.getElementById('password-error-log').innerHTML = "Паролата трябва да съдържа поне 8 символа!";
+            document.getElementById('password-error-log').innerHTML = "Password must contain at least 8 characters!";
         }else if (!passwordLog.match(/[a-z]/)) {
             condition = false;
-            document.getElementById('password-error-log').innerHTML = "Паролата трябва да съдържа поне една малка латинска, една главна латинска буква, една цифра и един специален символ!";
+            document.getElementById('password-error-log').innerHTML = "Password must contain at least one lowercase letter, one uppercase letter, one digit, and one special character!";
         }else if (!passwordLog.match(/[A-Z]/)) {
             condition = false;
-            document.getElementById('password-error-log').innerHTML = "Паролата трябва да съдържа поне една малка, една главна буква, една цифра и един специален символ!2";
+            document.getElementById('password-error-log').innerHTML = "Password must contain at least one lowercase letter, one uppercase letter, one digit, and one special character!";
         }else if (!passwordLog.match(/[0-9]/)) {
             condition = false;
-            document.getElementById('password-error-log').innerHTML = "Паролата трябва да съдържа поне една малка, една главна буква, една цифра и един специален символ!3";
+            document.getElementById('password-error-log').innerHTML = "Password must contain at least one lowercase letter, one uppercase letter, one digit, and one special character!";
         }else if (!specialChars.test(passwordLog)) {
             condition = false;
-            document.getElementById('password-error-log').innerHTML = "Паролата трябва да съдържа поне една малка, една главна буква, една цифра и един специален символ!4";
+            document.getElementById('password-error-log').innerHTML = "Password must contain at least one lowercase letter, one uppercase letter, one digit, and one special character!";
         }else{
             document.getElementById('password-error-log').innerHTML = "";
         }
         if (condition == true) {
-            alert("Успешнo влязохте в профила си!");
+            alert("You have successfully logged into your account!");
         }
         return condition;
     }
@@ -223,10 +223,10 @@ function Validate(form){
             nameError.innerHTML = required;
         }else if(name.length < 5){
             condition = false
-            nameError.innerHTML = "Въведете поне 5 символа!"
+            nameError.innerHTML = "Enter at least 5 characters!"
         }else if(!name.includes(" ")){
             condition = false
-            nameError.innerHTML = "Въведете име и фамилия (липсва интервал)!"
+            nameError.innerHTML = "Enter first and last name (space missing)!"
         }else{
             nameError.innerHTML = "";
         }
@@ -236,19 +236,19 @@ function Validate(form){
             emailError.innerHTML = required;
         }else if (email.length < 6) {
             condition = false;
-            emailError.innerHTML = "Имейлът трябва да съдържа поне 6 символа!";
+            emailError.innerHTML = "Email must contain at least 6 characters!";
         }else if (!email.includes("@")) {
             condition = false;
-            emailError.innerHTML = "Имейлът трябва да съдържа '@'!";
+            emailError.innerHTML = "Email must contain '@'!";
         }else if (!email.includes(".")) {
             condition = false;
-            emailError.innerHTML = "Имейлът трябва да съдържа '.'!";
+            emailError.innerHTML = "Email must contain '.'!";
         }else if (forbiddenChars.test(email)) {
             condition = false;
-            emailError.innerHTML = "Имейлът не може да съдържа специални символи!";
+            emailError.innerHTML = "Email cannot contain special characters!";
         }else if (!emailPattern.test(email)){
             condition = false;
-            emailError.innerHTML = "Имейлът е зададен в грешен формат!";
+            emailError.innerHTML = "Email format is incorrect!";
         }else{
             emailError.innerHTML = "";
         }
@@ -258,15 +258,15 @@ function Validate(form){
             phoneError.innerHTML = required;
         } else if (phone.length<7 || phone.length>15) {
             condition = false;
-            phoneError.innerHTML = "Невалидна дължина!";
+            phoneError.innerHTML = "Invalid length!";
         } else if(phone[0] != '+' && !phone[0].match(/[0-9]/)){
             condition = false;
-            phoneError.innerHTML = "Невалиден символ!";
+            phoneError.innerHTML = "Invalid character!";
         } else{
             for(var i = 1; i < phone.length; i++) {
                 if (!phone[i].match(/[0-9]/) ) {
                     condition = false;
-                    phoneError.innerHTML = "Невалиден символ!";
+                    phoneError.innerHTML = "Invalid character!";
                     break;
                 }else{
                     phoneError.innerHTML = "";
@@ -279,14 +279,14 @@ function Validate(form){
             dateError.innerHTML = required;
         }else if(date <= today){
              condition = false;
-             dateError.innerHTML = "Датата трябва да е бъдеща!";
+             dateError.innerHTML = "The date must be in the future!";
          }else{
              dateError.innerHTML="";
          }
 
          if (adults < 1) {
              condition = false;
-             adultsError.innerHTML="Трябва да има поне един възрастен!";
+             adultsError.innerHTML="There must be at least one adult!";
          }else{
             adultsError.innerHTML="";
          }
@@ -294,13 +294,13 @@ function Validate(form){
 
          if (children < 0) {
              condition = false;
-             childrenError.innerHTML = "Не може да съдържа отрицателни стойности!";
+             childrenError.innerHTML = "Cannot contain negative values!";
          }else{
             childrenError.innerHTML = "";
          }
 
          if (condition == true) {
-            document.getElementById("successful").innerHTML = "Успешна резервация!"
+            document.getElementById("successful").innerHTML = "Reservation successful!"
          }else{
             document.getElementById("successful").innerHTML = ""
          }

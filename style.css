@@ -198,8 +198,7 @@ body{
 }
 
 main{
-	flex-grow: 1;
-	margin: 0 auto;
+	
 }
 .top-offers{
 	display: flex;
@@ -549,7 +548,7 @@ footer h4{
 	border: 1px solid #004AAD;
 	border-radius: 0 15px 15px 0;
 	padding: 0.5rem;
-	max-width: 200px;
+	max-width: 203px;
 	max-height: 555px;
 	background-color: #f5f9ff;
 	margin-top:2.5rem;
@@ -612,6 +611,9 @@ footer h4{
 }
 .offers-main .filter .buttons{
 	margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 .offers-main .filter .buttons button{
 	padding: 0.2rem 0.5rem;
